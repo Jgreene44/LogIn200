@@ -93,8 +93,13 @@ namespace LogIn200
             String un = tokens[0];
             String up = tokens[1];
 
-            result = model.Validate(un, up);
+            result = model.Validate(CredentialsAlert, un, up);
             return result;
+        }
+
+        private static void CredentialsAlert(string s)
+        {
+            Console.WriteLine("Username: " + s.Split(':')[0]  + "\nPassword: " + s.Split(':')[1]);
         }
     }
 }

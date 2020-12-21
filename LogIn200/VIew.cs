@@ -71,8 +71,8 @@ namespace LogIn200
         {
             String un = tbUserName.Text;
             String up = tbPassword.Text;
-            Console.WriteLine(un + " " +up);
-            controller.handleEvents(State.GOTPASSWORD, un+":"+up);
+            //Console.WriteLine(un + " " + up);
+            controller.handleEvents(State.GOTPASSWORD, un +":"+ up);
 
         }
 

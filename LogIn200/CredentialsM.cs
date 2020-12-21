@@ -55,9 +55,16 @@ namespace LogIn200
         /// <param name="up">Password to verify</param>
         /// <returns>Returns true if the user name and p[assword match the credentials, 
         /// false otherwise</returns>
-        public bool Validate(String un, String up)
+        /// 
+
+        public delegate void delegateExample(string example);
+
+
+        public bool Validate(delegateExample s, String un, String up)
         {
             bool result = false;
+
+            s(un+ ":" + up);
 
             if(validUname.Equals(un) && validPassword.Equals(up))
             {
@@ -66,5 +73,8 @@ namespace LogIn200
 
             return result;
         }
+
+
     }
 }
+
